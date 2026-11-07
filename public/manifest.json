@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Translate Selected Text",
+  "version": "0.1.0",
+  "description": "Hover over selected text to see its translation.",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

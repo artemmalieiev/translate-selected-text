@@ -1,0 +1,54 @@
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  max-width: min(400px, calc(100vw - 16px));
+  max-height: 260px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #1f2328;
+  color: #f0f3f6;
+  font: 14px/1.45 system-ui, -apple-system, 'Segoe UI', sans-serif;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.box[hidden] {
+  display: none;
+}
+
+.note {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.note:empty {
+  display: none;
+}
+
+.loading .text {
+  font-style: italic;
+  opacity: 0.75;
+}
+
+.error .text {
+  color: #ffb4a8;
+}
+
+@media (prefers-color-scheme: light) {
+  .box {
+    background: #ffffff;
+    color: #1f2328;
+    border: 1px solid #d0d7de;
+  }
+
+  .error .text {
+    color: #b42318;
+  }
+}
